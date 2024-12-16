@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Stadium;
 use App\Models\User;
-Use App\Models\Product;
+use App\Models\Product;
 
 class StadiumController extends Controller
 {
@@ -50,4 +50,44 @@ class StadiumController extends Controller
         return view('admin/admindashboard2',compact('total_sta','total_user','total_product'));
         
     }
+
+    public function see_stadium_details(){
+
+        $stad_data = Stadium::all();
+
+        return view("see_stadium_details",compact('stad_data'));
+
+        
+    }
+
+
+    public function destroy($id){
+
+
+        $stadium = Stadium::findOrFail($id);
+    
+   
+    if ($stadium->picture && file_exists(public_path('images/stadiums/' . $stadium->picture))) {
+        unlink(public_path('images/stadiums/' . $stadium->picture));
+    }
+
+    $stadium->delete();
+
+   return redirect('/see_stadium_details2');
+    }
+
+
+    public function see_stadium_details2(){
+
+
+        $stad_data = Stadium::all();
+
+
+        return view('admin/see_stadium_details2',compact('stad_data'));
+    }
+
+
+
+
+
 }

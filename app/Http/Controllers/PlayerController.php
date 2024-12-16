@@ -51,6 +51,7 @@ class PlayerController extends Controller
 
 
         $total_sta = Stadium::count();
+
         $total_user = User::count();
         $total_product = Product::count();
 

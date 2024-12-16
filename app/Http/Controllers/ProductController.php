@@ -50,6 +50,44 @@ class ProductController extends Controller
         $total_user = User::count();
 
         $total_product = Product::count();
+        
         return view('admin/admindashboard2',compact('total_sta','total_user','total_product'));
     }
+
+
+
+
+    public function show_product(){
+
+        $product_data = Product::all();
+
+        return view('show_product',compact('product_data'));
+    }
+
+    public function show_product2(){
+
+        $product_data = Product::all();
+
+        return view('admin/show_product2',compact('product_data'));
+    }
+
+
+
+
+
+
+    public function destroy($id)
+{
+    $product = Product::findOrFail($id);
+    
+   
+    if ($product->picture && file_exists(public_path('images/products/' . $product->picture))) {
+        unlink(public_path('images/products/' . $product->picture));
+    }
+
+    $product->delete();
+
+   return redirect('/show_product2');
+}
+
 }

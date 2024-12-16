@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Stadium;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\IconicMoment;
 
 class AdminController extends Controller
 {
@@ -15,6 +16,7 @@ class AdminController extends Controller
         $total_sta = Stadium::count();
 
         $total_user = User::count();
+        
         $total_product = Product::count();
 
         

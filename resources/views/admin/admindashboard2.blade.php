@@ -18,8 +18,8 @@
                 </a>
                 <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
                     <li class="nav-item">
-                        <a href="#" class="nav-link align-middle px-0">
-                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Home</span>
+                        <a href="{{url('/home')}}" class="nav-link align-middle px-0">
+                            <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline ">Home</span>
                         </a>
                     </li>
                     <li>
@@ -43,8 +43,8 @@
                     </li>
 
                     <li>
-                        <a href="{{url('/delete')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
-                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Delete PLayer</span> </a>
+                        <a href="{{url('/show_player')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Show PLayers</span> </a>
                     </li>
 
 
@@ -58,7 +58,20 @@
                             <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Add Iconic Moments</span> </a>
                     </li>
 
-                    
+                    <li>
+                        <a href="{{url('/show_product2')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Show Products</span> </a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('/see_iconic2')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Iconic Moments</span> </a>
+                    </li>
+
+                    <li>
+                        <a href="{{url('/see_stadium_details2')}}" data-bs-toggle="collapse" class="nav-link px-0 align-middle">
+                            <i class="fs-4 bi-speedometer2"></i> <span class="ms-1 d-none d-sm-inline">Stadiums</span> </a>
+                    </li>
 
                         </ul>
 

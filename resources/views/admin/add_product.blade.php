@@ -48,6 +48,7 @@
                     <option value="Jursey">Jursey</option>
                     <option value="Guard">Guard</option>
                     <option value="Bag">Bag</option>
+                    <option value="Bag">Pad</option>
                   </select>
                 </div>
               </div>
